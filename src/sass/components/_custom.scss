@@ -1,0 +1,382 @@
+// Global Edit
+p {
+  line-height: 1.6;
+}
+a {
+  transition: all 300ms ease;
+}
+img {
+  max-width: 100%;
+}
+.btn {
+  letter-spacing: 1px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 0.4px;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-family-sans-serif;
+}
+
+.billboard {
+  background-size: cover;
+  background-repeat: none;
+  @include media-breakpoint-only(xxl) {
+    min-height: 90vh;
+  }
+
+  &-caption {
+    max-width: 962px;
+    background-color: #fff;
+
+    @include media-breakpoint-only(xxl) {
+      position: absolute;
+      top: 65%;
+      transform: translateY(-65%);
+    }
+    padding: 30px 30px 20px 40px;
+    @include media-breakpoint-up(lg) {
+      padding: 60px 50px 50px 70px;
+    }
+
+    border-top: 3px solid $primary;
+    .btn {
+      img {
+        display: inline-block;
+      }
+    }
+  }
+  .slide-item:before {
+    @include media-breakpoint-up(lg) {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 55px;
+      flex: 0 0 55px;
+      background-color: $secondary;
+      margin-right: 10px;
+      margin-top: 30px;
+    }
+  }
+  .slick-dots {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    @include media-breakpoint-down(lg) {
+      left: -10px;
+    }
+  }
+}
+
+.client-list {
+  padding-top: 40px;
+
+  text-align: center;
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+  }
+
+  span {
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    img {
+      filter: grayscale(1);
+    }
+    &:hover {
+      img {
+        filter: grayscale(0);
+      }
+    }
+  }
+}
+
+// service-content-wrapper
+.service-content-wrapper {
+  padding: 60px 30px 60px 20px;
+  @include media-breakpoint-up(xl) {
+    padding: 60px;
+  }
+
+  background: url("../img/services-bg.png") no-repeat 0;
+  background-size: cover;
+  color: #98a5d9;
+  .accordion {
+    @include media-breakpoint-up(xl) {
+      min-height: 300px;
+    }
+  }
+}
+
+// accordion light
+.accordion {
+  &-light {
+    .accordion-button {
+      background: rgba(254, 254, 254, 0.05);
+      border: 0;
+      padding: 13px 20px;
+      color: #fff;
+      &:before {
+        content: "\A";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #fff;
+        display: inline-block;
+        margin-right: 10px;
+      }
+      &:after {
+        display: none;
+      }
+      &.collapsed {
+        background-color: transparent;
+        color: #98a5d9;
+        &:before {
+          background-color: #98a5d9;
+        }
+      }
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    .accordion-body {
+      color: #98a5d9;
+      padding: 5px 20px 25px;
+      background: rgba(254, 254, 254, 0.05);
+    }
+    .accordion-collapse {
+      border: 0;
+    }
+  }
+}
+
+.recent-work {
+  .container {
+    @include media-breakpoint-up(xl) {
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+  .row {
+    @include media-breakpoint-up(xl) {
+      overflow: hidden;
+    }
+  }
+  &-right {
+    @include media-breakpoint-up(xl) {
+      left: calc((100% - 1460px) / 2);
+      position: relative;
+    }
+  }
+  &-left {
+    @include media-breakpoint-only(xxl) {
+      left: calc((100% - 1400px) / 2);
+      position: relative;
+    }
+  }
+
+  .slick-three {
+    .work-slide-item {
+      padding: 10px;
+      @include media-breakpoint-up(md) {
+        padding: 25px;
+      }
+
+      &.slick-current {
+        img {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 19px;
+    list-style: none;
+    left: -5px;
+    margin: 0;
+    padding: 0;
+    button {
+      font-size: 0;
+      width: 2px;
+      height: 16px;
+      display: block;
+      padding: 0;
+      margin: 5px 0;
+      border: none;
+      background-color: #c9cdd3;
+    }
+    .slick-active {
+      button {
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+// Heading
+.heading {
+  .sub-heading {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #4d5b6c;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 44px;
+      height: 1px;
+      background-color: #4d5b6c;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+    &-sm {
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+  }
+  &-light {
+    .sub-heading {
+      color: #98a5d9;
+      &::before {
+        background-color: #98a5d9;
+      }
+    }
+  }
+}
+
+// heading faded
+
+.heading-faded {
+  small {
+    font-size: 50%;
+    text-transform: uppercase;
+    opacity: 0.5;
+    color: #0d2481;
+  }
+}
+
+// Dark Alert
+.alert-dark {
+  background-color: #0c2175;
+  color: #98a5d9;
+  padding: 17px 30px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+// callout-section
+.callout-section {
+  padding: 100px 0 90px;
+  background: url("../img/dot-line-pattern.png") no-repeat center;
+  background-size: cover;
+  background-color: #0d2481;
+  color: #98a5d9;
+  .btn-primary {
+    background-color: #173198;
+  }
+}
+
+// Testimonial
+.testimonial-slide {
+  .slick-dots {
+    position: absolute;
+    bottom: 80px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    left: 2.7rem;
+    li {
+      display: inline-block;
+      margin-right: 7px;
+    }
+    button {
+      width: 16px;
+      height: 2px;
+    }
+  }
+}
+
+// blog media box
+.blog {
+  &-media-img {
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+}
+
+// links sm
+
+.links {
+  &-sm {
+    font-size: 14px;
+    a {
+      display: block;
+      padding: 7px 0;
+    }
+  }
+}
+
+// Slick slider css
+
+.slick-arrow {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 37px;
+  width: 37px;
+  border: 1px solid #888;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 31px;
+  color: #888;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: $color2;
+    color: #fff;
+    border-color: $orange;
+  }
+  &.slick-prev {
+    left: -60px;
+  }
+  &.slick-next {
+    right: -50px;
+  }
+  @media (max-width: 1199.98px) {
+    display: none !important;
+  }
+}
+
+.slick-dots {
+  list-style: none;
+
+  button {
+    font-size: 0;
+    width: 2px;
+    height: 16px;
+    display: block;
+    padding: 0;
+    margin: 5px 0;
+    border: none;
+    background-color: #c9cdd3;
+  }
+  .slick-active {
+    button {
+      background-color: $primary;
+    }
+  }
+}

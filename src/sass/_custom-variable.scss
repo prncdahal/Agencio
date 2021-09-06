@@ -1,0 +1,105 @@
+/** Your selected colors **/
+$color1:#0d2481;  
+$color2:#1e2329;  
+$color3:#854811;
+$color4:#057876;
+$color5:#6EE4FF;
+$color6:#8B8B8B;
+$color7:#6B6B6B;  // Text Color
+$color8:#545454;
+$color9:#353535;  // Heading Color
+
+$theme-colors: (
+  "primary":    $color1,
+  "secondary":  $color2,
+  "success":    $color1,
+  "info":       #0dcaf0,
+  "warning":    #ECF22E,
+  "danger":     red,
+  "light":      #fff,
+  "dark":       $color2
+);
+
+// Color Declaration
+$primary:$color1; // Primary Color
+$secondary:$color2; // Secondary Color
+$warning:$color3;   
+
+// Change font family
+ $font-family-sans-serif:'Noto Serif', serif;
+$font-family-base: 'Noto Sans', sans-serif;
+// $headings-font-family:  $font-family-sans-serif;
+
+$headings-color:#1e2329;
+// Links
+// Style anchor elements.
+
+
+$link-color:         #4d5b6c;     
+$link-hover-color: $primary;                ;
+$link-hover-decoration: none;
+
+// HEADING FONT SIZE
+$h1-font-size:   50px;
+$h2-font-size:   40px;             
+$h3-font-size:   30px;             
+// $h4-font-size:                
+$h5-font-size:   20px;            
+// $h6-font-size:                
+
+
+// Navbar
+
+$navbar-nav-link-padding-x:         1.5rem;
+$navbar-light-active-color:         $color2;
+$navbar-light-active-color:  $primary;
+$navbar-light-hover-color:$primary;
+$navbar-light-color:$color8;
+$navbar-dark-color:              #fff;
+
+
+// Buttons
+
+// $btn-padding-y-lg:            $input-btn-padding-y-lg !default;
+$btn-padding-x-lg:           1.25rem;
+$btn-font-size-lg:            1.15rem;
+$input-btn-padding-y:         0.675rem;
+$input-btn-padding-x:         1rem;
+$input-btn-font-size:         0.9rem;
+$btn-border-radius:          4px;
+$btn-padding-y:               0.75rem;
+$btn-border-radius-lg:        4px;
+$btn-font-size-lg:            1rem;
+$btn-padding-y-lg:            0.8rem;
+$btn-padding-x-lg:            1.5rem;
+
+
+//Body 
+
+$body-color:#4c5b6d;
+$yiq-text-dark:   #ffff; // Changing  btn color
+
+
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$border-radius:               0;
+
+
+// Links
+//
+// Style anchor elements.
+
+
+$link-decoration:                         none;
+
+// scss-docs-start container-max-widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1400px
+);
